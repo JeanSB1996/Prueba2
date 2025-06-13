@@ -42,3 +42,12 @@ streamlit run dashboard.py
 ```
 
 Allí se ingresan los parámetros y se visualiza un resumen de diferencias y los colaboradores con cambio de empleador.
+
+### Macros y hoja de hallazgos
+
+Se agregó el script `update_hallazgos.py` que obtiene las utilidades de las determinaciones tributarias, ejecuta el recálculo y actualiza el libro principal creando la hoja **Hallazgos**. Para ejecutar este proceso desde Excel se incluye el módulo `recalculo_macros.bas` con la macro `ActualizarHallazgos`.
+
+1. Instalar los requisitos y ubicar `python` en el PATH.
+2. Importar `recalculo_macros.bas` en el archivo `Analisis Gratificacion 2024 - Prosegur V1.xlsx` y ejecutar `ActualizarHallazgos`.
+
+La macro ejecuta el script Python y en la hoja "Hallazgos" se muestran las diferencias por trabajador.
